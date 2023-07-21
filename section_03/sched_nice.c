@@ -105,6 +105,8 @@ int main(int argc, char *argv[]){
 	int i, ncreated;
 	for(i = 0, ncreated = 0; i< nproc; i++, ncreated++) {
 		pids[i] = fork();
+		printf("pids값 :: %d /", pids[i]);
+		fflush(stdout);
 		if (pids[i] < 0 ){
 			goto wait_children;
 		}
